@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="js/arrayDatos.js"></script>
+</head>
+<body>
+	<script>
+		///////////////// Ejemplo forEach //////////////////////////
+		let mostrar = confirm("Confirme para dar LECTURA de DATOS");
+		let tablas="";
+		if (mostrar) {
+			datos.forEach(fila => {
+				//document.write(fila[0]);
+				tablas += 
+				`<table border='1'>
+					<tr>
+						<th>No.</th>	
+						<th>Nombres</th>
+						<th>Apellidos</th>
+					</tr>
+					<tr>
+						<td>`+fila[0]+`</td>
+						<td>`+fila[2]+`</td>
+						<td>`+fila[3]+`</td>
+					</tr>
+				</table>
+				<br>
+				`;
+			});
+			document.write(tablas);
+		} else {
+			document.write("<h1>Usted a cancelado...</h1>");
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//Declaración de variables
+		let miFuncion = new Function("8+4");
+		let moneda = "MXN";
+		let monto = 1;
+		let hoy = new Date();
+
+		//Verificar si las variables son de la instancia especificada
+		console.log(miFuncion instanceof Object);	// true
+		console.log(moneda instanceof String); 		// false
+		console.log(monto instanceof Number); 		// false
+		console.log(hoy instanceof Date); 			// true
+	</script>
+</body>
+</html>

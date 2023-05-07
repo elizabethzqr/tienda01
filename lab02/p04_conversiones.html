@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/////////// Convertir STRING a NUMBER //////////////////////
+		//Convertir con Number()
+		let num1 = "7";  let num2 = "5";
+		let concatena = num1 + num2;
+		console.log(concatena);					//75 (Concatena)
+
+		let suma = Number(num1) + Number(num2);
+		console.log(suma);						//12 (Suma)
+	
+		let texto1 = "Puro texto";
+		let convertir = Number(texto1);	
+		console.log(convertir);					//NaN (Representa)
+		
+		//Convertir con operador +
+		const x1 = 16;
+		console.log(+x1); 						// 16 (number)
+
+		//Convertir con math.floor() 
+		let cadena = "1222";
+		console.log(Math.floor(cadena)); 		// 1222 (number)
+
+		//Convertir con parseInt()
+		let myString = "126"
+		console.log(parseInt(myString)) 		// 126 (number)
+
+		//Convertir multiplicando con números
+		let str = "1612"
+		console.log (str * 1) 					// 1612 (number)
+
+		/////////// Convertir NUMBER a STRING //////////////////////
+		let numero1 = 9;
+		let transformar1 = toString(numero1);	//FORMA 1	
+		console.log(typeof(transformar1));		//String ("9")
+
+		let transformar2 = numero1.toString();	//FORMA 2
+		console.log(typeof(transformar2)); 		//String ("9")
+
+		let transformar3 = numero1.toString(2);	//FORMA 3 con BASE 2
+		console.log(transformar3); 				//"1001" (binario) (String)
+
+		let miArray = ["Juan", "Luis"];			//Array
+		let transformar4 = miArray.toString();
+		console.log(transformar4); 				//"Juan,Luis" (String)
+
+		//Operadsor coma
+		var x = [0,1,2,3,4,5,6,7,8,9]
+		var a = [x, x, x, x, x];
+
+		for (var i = 0, j = 9; i <= j; i++, j--)		//  ^
+			console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+
+		//Operador unario
+		x = 42; 			// implícitamente crea window.x
+		var y = 43;
+		var myobj = {h: 4}; // crea un objeto con la propiedad h
+
+		console.log(delete x);       // true (se puede eliminar si se crea implícitamente ¿...?)
+		console.log(delete y);       // false (no se puede borrar si se declara con var)
+		console.log(delete Math.PI); // false (no se pueden eliminar propiedades no configurables)
+		console.log(delete myobj.h); // true (puede eliminar propiedades definidas por el usuario)
+		console.log(myobj);			 // {}	(Vacio)
+		
+		//Operadores relacionales
+		// Arreglos
+		var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+		console.log(0 in trees);        	// true
+		console.log(3 in trees);        	// true
+		console.log(6 in trees);        	// false
+		console.log('bay' in trees);    	// false (Se especifica número del índice, no el valor)
+		console.log('length' in trees); 	// true (la longitud es una propiedad de Array)
+
+		// objetos integrados
+		console.log('PI' in Math);          // true
+		var myString1 = new String('coral');
+		console.log('length' in myString1); // true
+
+		// Objetos personalizados
+		var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
+		console.log('make' in mycar);  		// true
+		console.log('model' in mycar); 		// true
+	</script>
+</body>
+</html>

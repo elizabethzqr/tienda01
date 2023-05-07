@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		///////////////// Ejemplo con if y else /////////////////////////////
+		let valor = prompt("(1) Ingrese una nota de 0 a 20",0);
+		let nota = parseInt(valor);
+		if (nota <= 12) {
+			console.log("¡Estoy desaprobado!");
+		} else {
+			console.log("¡Estoy aprobado! ("+nota+")");
+		}
+		///////////////// switch ////////////////////////////////////////////
+		let valor2 = prompt("(2) Ingrese una nota de 0 a 20",0);
+		let nota2 = parseInt(valor2);
+		switch (true) {
+			case (nota2<=12): console.log("¡Estoy desaprobado!");		  break;
+			default: 		  console.log("¡Estoy aprobado! ("+nota2+")"); break;
+		}
+		///////////////// switch ////////////////////////////////////////////
+		let valor3 = prompt("(3) Que tan satisfecho se encuentra (Escala de likert 1-5)",0);
+		let escala = parseInt(valor3);
+		switch (escala) {
+			case 1: console.log("¡Muy insatisfecho!");	break;
+			case 2: 
+			case 3: console.log("¡Regular!");		    break;
+			case 4: 
+			case 5: console.log("¡Muy satisfecho!");	break;
+			default: console.log("¡Valor NO VáLIDO! ("+escala+")"); break;
+		}
+		///////////////// operador ternario //////////////////////////////////
+		let valor4 = prompt("(4) Ingrese un número",0);
+		let ternario = parseInt(valor4);
+		// Sintaxis de operador ternario: (condición ? verdadero : falso)
+		var mensaje = (ternario % 2)? "impar" : "par";
+		console.log("El numero es: ", mensaje);
+*/
+
+		///////////////// operador ternario //////////////////////////////////
+		let valor4 = prompt("(5) Ingrese un número",0);
+		let yy = parseInt(valor4);
+		// Sintaxis de operador ternario: (condición ? verdadero : falso)
+		var mensaje = !(yy%7)? "Si" : "No";
+		console.log("El numero es: ", mensaje);
+		console.log(yy%7);
+
+	</script>
+</body>
+</html>

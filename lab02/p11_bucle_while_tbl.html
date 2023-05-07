@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		///////////////// Ejemplo while //////////////////////////////
+		let valor = prompt("¿Cuántos filas desea agregar a la tabla?", 0);
+		let bucles = parseInt(valor);
+		let parte1=""; 		let filas="";	  let parte2="";	 let i=0;
+		if (bucles > 0) {
+			document.writeln("<h1>Imprimio " +bucles+ " filas en la tabla</h1>");
+			parte1 = 
+			`<table border='1'>
+				<tr>
+					<th colspan='3'>Titulo</th>	
+				</tr>
+				<tr>
+					<th>C1-Cab</th>	
+					<th>C2-Cab</th>
+					<th>C3-Cab</th>
+				</tr>`;
+				document.write(parte1);
+				while (i < bucles) {
+					i++; 
+					filas +=
+					`<tr>
+						<td>C1-F${i} </td>
+						<td>C2-F`+i+`</td>
+						<td>C3-F`+i+`</td>
+					</tr>`;
+				}
+				document.write(filas);
+			parte2 =
+			`</table>
+			<br>`;
+			document.write(parte2); 		//alert(tablas);
+		} else {
+			document.writeln("Valor (" + valor + ") NO es válido <br>");
+			document.writeln("<img src='img/loto2.png' alt='imagen' width='200'>");
+		}
+	</script>
+</body>
+</html>

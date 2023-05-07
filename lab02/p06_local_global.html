@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let global = "Soy variable global";
+		function realizarAccion() { 
+			global = "Soy variable global modificada en la función"; 
+			console.log(global); 			//Soy variable global modificada en la función
+			let local = "Soy variable local";
+			console.log(local);				//Soy variable local
+		} 
+		console.log(global);				//Soy variable global modificada en la función
+		realizarAccion();					//Ejecuta linea 14 y linea 16
+		console.log(global);				//Soy variable global modificada en la función
+		console.log(local); 				//Error... Variable no esta definida
+	</script>
+</body>
+</html>

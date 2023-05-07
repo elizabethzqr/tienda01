@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		///////////////// Ejemplo con if y else //////////////////////////////
+		let valor = prompt("Ingrese una nota de 0 a 20",0);
+		let nota = parseInt(valor);
+		if (nota < 0) {
+			console.log("Valores NEGATIVOS no es valido!");
+		} else if (0 >= nota || nota <= 12) {
+			console.log("¡Estoy desaprobado!");
+		} else if (13 >= nota || nota <= 20) {
+			console.log("¡Estoy aprobado! ("+nota+")");
+		} else if (nota > 20){
+			console.log("Valor superior a 20 no es valido!");
+		} else {
+			console.log("Valor NO VALIDO! + ("+nota+")");
+		}
+
+		///////////////// switch ////////////////////////////////////////////
+		let valor2 = prompt("Ingrese una nota de 0 a 20",0);
+		let nota2 = parseInt(valor2);
+		switch (true) {
+			case (nota2 < 0): 					console.log("Valores NEGATIVOS no es valido!");		break;
+			case (0 >= nota2 || nota2 <= 12): 	console.log("¡Estoy desaprobado!");		  			break;
+			case (13 >= nota2 || nota2 <= 20):	console.log("¡Estoy aprobado! ("+nota2+")");;		break;
+			case (nota2 > 20): 				 	console.log("Valor superior a 20 no es valido!");	break;
+			default: 		  					console.log("Valor NO VALIDO! + ("+nota2+")"); 	    break;
+		}
+	</script>
+</body>
+</html>

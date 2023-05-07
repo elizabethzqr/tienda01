@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		///////////////// Ejemplo for //////////////////////////////
+		let valor = prompt("¿Cuántos bucles desea hacer?", 0);
+		let bucles = parseInt(valor);
+		let tablas="";
+		
+		if (bucles > 0) {
+			document.writeln("<h1>Imprimio " +bucles+ " tablas</h1>");
+			//Uso del ACENTO GRAVE(`)(Alt+96) en la tabla
+			//Permite anidar varias lineas de codigo y 
+			//+= acumula las tablas generadas en cada bucle  
+			for (let i = 0; i < bucles; i++) {
+				tablas += 
+				`<table border='1'>
+					<tr>
+						<td colspan='3'>C1-F1 --> ${i+1}</td>	
+<!-- Comentario			<td>C2-F1</td>
+						<td>C3-F1</td>			Cierre comentario-->
+					</tr>
+					<tr>
+						<td>C1-F1</td>	
+						<td rowspan='2'>C2-F1</td>
+						<td>C3-F1</td>
+					</tr>
+					<tr>
+						<td>C1-F2</td>
+<!--Comentario			<td>C2-F2</td>			Cierre comentario-->
+						<td>C3-F2</td>
+					</tr>
+				</table>
+				<br>
+				`;
+			}
+			document.write(tablas);
+			//alert(tablas);
+		} else {
+			document.writeln("Valor (" + valor + ") NO es válido <br>");
+			document.writeln("<img src='img/loto3.jpg' alt='imagen' width='200'>");
+		}
+	</script>
+</body>
+</html>

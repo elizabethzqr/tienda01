@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Documento sin título</title>
+    <link href="css/estilosSitio.css" rel="stylesheet">
+    <script src="js/funcionesAsignar.js"></script>
+</head>
+<body>
+    <h1> Asignaciones a través de value e innerHTML </h1>
+    <div id="valores">
+        <div id="div1">
+            <p> Valor 1<input type="text" name="txtValor1" id="txtValor1" /> </p>
+            <p> Valor 2<input type="text" name="txtValor2" id="txtValor2" /> </p>
+        </div>
+    </div>
+    <div id="div2">Operaciones: <br>
+        <input type="button" onclick="asignar(document.getElementById('txtValor1').value);"   value="Pasar valor 1 >>>"/>
+        <input type="button" onclick="asignar(document.getElementById('txtValor2').value);"   value="Pasar valor 2 >>>"/>
+        <input type="button" onclick="concatenar();"                                            value="Concatenar >>>"/>
+        <input type="button" onclick="asignar(document.getElementById('valores').innerHTML);" value="Pasar todo >>>"/>
+    </div>
+ 
+    <div id="div3">
+        <div id="ResultadoDiv">Resultado en div (innerHTML):</div>
+        <input type="button" name="ResultadoBtn" id="ResultadoBtn" value="Resultado en boton (value)"/><br>
+        <input type="text" name="ResultadoTxt" id="ResultadoTxt" value="Resultado en texto (value)"/>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		///////////////// Ejemplo do ///////////////////////////////
+		let valor = prompt("¿Cuántos bucles desea hacer?",1);
+		alert(valor);
+		let bucles = parseInt(valor);
+		let i=0;
+		if (bucles > 0) {
+			document.writeln("<h1>Imprimio " +bucles+ " imagenes</h1>");
+			do{
+				i++;
+				document.writeln(i + "<img src='img/loto1.jpg' alt='imagen' width='200'>");
+			}while(i < bucles)
+		} else {
+			document.writeln("Valor (" + valor + ") NO es válido <br>");
+			document.writeln("<img src='img/loto2.png' alt='imagen' width='200'>");
+		}		
+	</script>
+</body>
+</html>
