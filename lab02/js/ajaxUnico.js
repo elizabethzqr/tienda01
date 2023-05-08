@@ -60,9 +60,9 @@ function ver(variables,etiqueta,id,procesador){
 	///////////////////////////////////////////////////////////////////////
 	////// La condición, CREA e ENVIA DATOS al URL a través de objeto /////
 	///////////////////////////////////////////////////////////////////////		
-	//alert("Hola"+etiqueta+"/"+id+"/"+variables+"/"+carpeta+"/"+procesador);
+	alert("Hola"+etiqueta+"/"+id+"/"+variables+"/"+carpeta+"/"+procesador);
 	objXHR = inicializa_xhr();
-	alert(objXHR);
+	//alert(objXHR);
 	if(objXHR){
 		//var host = document.getElementById('txtHost').value;
 		//var directorio = document.getElementById('txtDirectorio').value;
@@ -79,7 +79,7 @@ function ver(variables,etiqueta,id,procesador){
 		host="elizabethzqr.github.io/";
 		directorio="tienda01";
 		url="https://"+host+"/"+directorio+"/"+procesador;
-
+		alert(url);
 		var losDatos = crearCadena(variables);			
 		objXHR.onreadystatechange=procesaRespuesta;
 		objXHR.open('POST',url,true);
