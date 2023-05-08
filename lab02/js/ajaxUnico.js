@@ -60,7 +60,7 @@ function ver(variables,etiqueta,id,procesador){
 	///////////////////////////////////////////////////////////////////////
 	////// La condición, CREA e ENVIA DATOS al URL a través de objeto /////
 	///////////////////////////////////////////////////////////////////////		
-	alert("variables"+variables+"/etiqueta"+etiqueta+"/id"+id+"/procesador"+procesador);
+	alert("variables="+variables+"/etiqueta="+etiqueta+"/id="+id+"/procesador="+procesador);
 	objXHR = inicializa_xhr();
 	//alert(objXHR);
 	if(objXHR){
@@ -76,11 +76,12 @@ function ver(variables,etiqueta,id,procesador){
 		beforeSend: setHeader
 */
 
-		host="elizabethzqr.github.io/";
+		host="elizabethzqr.github.io";
 		directorio="tienda01";
 		url="https://"+host+"/"+directorio+"/"+procesador;
 		alert(url);
-		var losDatos = crearCadena(variables);			
+		var losDatos = crearCadena(variables);		
+		alert(losDatos);
 		objXHR.onreadystatechange=procesaRespuesta;
 		objXHR.open('POST',url,true);
 		objXHR.setRequestHeader("Content-type","application/x-www-form-urlencoded");
