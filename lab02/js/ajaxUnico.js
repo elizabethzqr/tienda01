@@ -62,7 +62,7 @@ function ver(variables,etiqueta,id,procesador){
 	///////////////////////////////////////////////////////////////////////		
 	//alert("Hola"+etiqueta+"/"+id+"/"+variables+"/"+carpeta+"/"+procesador);
 	objXHR = inicializa_xhr();
-	//alert(objXHR);
+	alert(objXHR);
 	if(objXHR){
 		//var host = document.getElementById('txtHost').value;
 		//var directorio = document.getElementById('txtDirectorio').value;
