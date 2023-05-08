@@ -60,7 +60,7 @@ function ver(variables,etiqueta,id,procesador){
 	///////////////////////////////////////////////////////////////////////
 	////// La condición, CREA e ENVIA DATOS al URL a través de objeto /////
 	///////////////////////////////////////////////////////////////////////		
-	alert("Hola"+etiqueta+"/"+id+"/"+variables+"/"+carpeta+"/"+procesador);
+	alert("variables"+variables+"/etiqueta"+etiqueta+"/id"+id+"/procesador"+procesador);
 	objXHR = inicializa_xhr();
 	//alert(objXHR);
 	if(objXHR){
