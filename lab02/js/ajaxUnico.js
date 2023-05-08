@@ -83,7 +83,7 @@ function ver(variables,etiqueta,id,procesador){
 		var losDatos = crearCadena(variables);		
 		alert(losDatos);
 		objXHR.onreadystatechange=procesaRespuesta;
-		objXHR.open('POST',url,true);
+		objXHR.open('GET',url,true);
 		objXHR.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		objXHR.send(losDatos);				
 	}
