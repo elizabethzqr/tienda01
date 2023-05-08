@@ -60,30 +60,18 @@ function ver(variables,etiqueta,id,procesador){
 	///////////////////////////////////////////////////////////////////////
 	////// La condición, CREA e ENVIA DATOS al URL a través de objeto /////
 	///////////////////////////////////////////////////////////////////////		
-	alert("variables="+variables+"/etiqueta="+etiqueta+"/id="+id+"/procesador="+procesador);
+	//alert("variables="+variables+"/etiqueta="+etiqueta+"/id="+id+"/procesador="+procesador);
 	objXHR = inicializa_xhr();
 	//alert(objXHR);
 	if(objXHR){
 		//var host = document.getElementById('txtHost').value;
 		//var directorio = document.getElementById('txtDirectorio').value;
-/*
-		url: "http://urlprovedor.mx/ws/direcciones.asmx/getCarburaciones",
-		type: 'GET',
-		crossDomain: true,
-		dataType: 'jsonp',
-		success: function() { alert("Success"); },
-		error: function() { alert('Failed!'); },
-		beforeSend: setHeader
-*/
-
 		host="elizabethzqr.github.io";
 		directorio="tienda01";
-		url="https://"+host+"/"+directorio+"/"+procesador;
-		alert(url);
-		var losDatos = crearCadena(variables);		
-		alert(losDatos);
+		url="https://"+host+"/"+directorio+"/"+procesador;	//alert(url);
+		var losDatos = crearCadena(variables);				//alert(losDatos);
 		objXHR.onreadystatechange=procesaRespuesta;
-		objXHR.open('GET',url,true);
+		objXHR.open('GET',url,true);						//Se cambio GET x POST pq no manda nada y procesador es html
 		objXHR.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		objXHR.send(losDatos);				
 	}
